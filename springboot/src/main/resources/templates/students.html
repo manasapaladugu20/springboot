@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>university portal</title>
+</head>
+<body>
+<h2> List of students in the university </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Enrollment id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr> th:each="student : ${data}">
+            <td th:text="${student.getId()}"/>
+            <td th:text="${student.getFirstname()}"/>
+            <td th:text="${student.getLastname()}"/>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
